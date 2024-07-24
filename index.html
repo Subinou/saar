@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAAR Assurances</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <img src="images/logo.jpg" alt="SAAR Assurances Logo" class="logo">
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li class="dropdown">
+                        <a href="#">Nos Services <span class="arrow"></span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="assurances/vie.html">Assurance Vie et Épargne</a></li>
+                            <li><a href="assurances/sante.html">Assurance Santé</a></li>
+                            <li><a href="assurances/automobile.html">Assurance Automobile</a></li>
+                            <li><a href="assurances/habitation.html">Assurance Habitation</a></li>
+                            <li><a href="assurances/rcivile.html">Assurance Responsabilité Civile</a></li>
+                            <li><a href="assurances/transport.html">Assurance Transport</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Nous contacter</a></li>
+                </ul>
+            </nav>
+            <button id="dark-mode-toggle">Mode Sombre</button>
+        </div>
+    </header>
+    
+    <main>
+        <section id="hero" class="hero fade-in-section">
+            <div class="hero-image-container">
+                <img src="images/vieux.jpg" alt="Image de Fond" class="hero-image">
+                <div class="hero-text-container">
+                    <h1>Bienvenue chez SAAR Assurances</h1>
+                    <p>Votre partenaire de confiance pour toutes vos assurances</p>
+                    <a href="#services" class="cta-button">Découvrez Nos Services</a>
+                </div>
+            </div>
+        </section>           
+
+        <section id="about" class="about-section fade-in-section">
+            <div class="container">
+                <h2>À propos de nous</h2>
+                <div class="about-content">
+                    <img src="images/famille.jpg" alt="À propos de nous" class="about-image">
+                    <p>Chez SAAR Assurances, nous nous engageons à fournir des solutions d'assurance complètes et personnalisées pour répondre aux besoins variés de notre clientèle, allant des particuliers aux grandes entreprises commerciales.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section fade-in-section">
+            <div class="container">
+                <h2>Nos Services</h2>
+                <div class="services-grid">
+                    <div class="service fade-in-left">
+                        <i id="use" class="fas fa-user-shield service-icon"></i>
+                        <div class="service-content">
+                            <h3>Assurance Vie et Épargne</h3>
+                            <p>Sécurisez l'avenir de vos proches avec nos solutions d'assurance vie et épargne adaptées à vos besoins.</p>
+                        </div>
+                    </div>
+                    <div class="service fade-in-right">
+                        <i class="fas fa-medkit service-icon"></i>
+                        <div class="service-content">
+                            <h3>Assurance Santé</h3>
+                            <p>Bénéficiez d'une couverture santé optimale pour vous et votre famille, garantissant des soins de qualité en toutes circonstances.</p>
+                        </div>
+                    </div>
+                    <div class="service fade-in-left">
+                        <i class="fas fa-car service-icon"></i>
+                        <div class="service-content">
+                            <h3>Assurance Automobile</h3>
+                            <p>Roulez en toute tranquillité avec nos offres d'assurance automobile couvrant tous types de véhicules.</p>
+                        </div>
+                    </div>
+                    <div class="service fade-in-right">
+                        <i class="fas fa-home service-icon"></i>
+                        <div class="service-content">
+                            <h3>Assurance Habitation</h3>
+                            <p>Protégez votre domicile contre les imprévus avec notre assurance habitation complète.</p>
+                        </div>
+                    </div>
+                    <div class="service fade-in-left">
+                        <i class="fas fa-gavel service-icon"></i>
+                        <div class="service-content">
+                            <h3>Assurance Responsabilité Civile</h3>
+                            <p>Protégez-vous contre les dommages causés à des tiers grâce à notre assurance responsabilité civile.</p>
+                        </div>
+                    </div>
+                    <div class="service fade-in-right">
+                        <i class="fas fa-truck service-icon"></i>
+                        <div class="service-content">
+                            <h3>Assurance Transport</h3>
+                            <p>Assurez vos biens pendant le transport avec notre couverture adaptée aux risques de logistique.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>                
+
+        <section id="contact" class="contact-section fade-in-section">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <p>Pour toute question ou demande de devis, n'hésitez pas à nous contacter via notre formulaire <a href="contact.html">ici</a>.</p>
+                <p>Ou par téléphone au : +235 22 52 09 80</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 SAAR Assurances. Tous droits réservés.</p>
+            <ul class="social">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
