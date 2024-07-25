@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.getElementById('nav-list');
+
+    menuToggle.addEventListener('click', function () {
+        navList.classList.toggle('active');
+    });
     const darkModeToggle = document.getElementById('dark-mode-toggle');
 
     if (localStorage.getItem('dark-mode') === 'true') {
