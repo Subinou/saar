@@ -71,6 +71,17 @@ header .logo {
     transition: all 0.3s ease-in-out;
 }
 
+.nav-list {
+    display: none; /* Cache la navigation par défaut */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list.active {
+    display: block; /* Affiche la navigation quand la classe 'active' est ajoutée */
+}
+
 nav ul.nav-list {
     list-style-type: none;
     margin: 0;
