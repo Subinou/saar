@@ -57,6 +57,20 @@ header .logo {
     margin-right: auto;
 }
 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
 nav ul.nav-list {
     list-style-type: none;
     margin: 0;
@@ -466,4 +480,87 @@ form {
 .form-group textarea:focus {
     border-color: var(--primary-color);
     outline: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul.nav-list {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 100%;
+        background-color: var(--secondary-color);
+    }
+
+    nav ul.nav-list li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav ul.nav-list li a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content li a {
+        padding: 10px;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+
+    .hero-text-container h1 {
+        font-size: 3em;
+    }
+
+    .hero-text-container p {
+        font-size: 1.2em;
+    }
+
+    .services-grid {
+        flex-direction: column;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .about-image {
+        width: 100%;
+    }
 }
