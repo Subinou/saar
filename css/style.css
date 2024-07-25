@@ -58,11 +58,7 @@ header .logo {
 }
 
 .menu-toggle {
-    position: absolute; /* Positionnement absolu par rapport à nav */
-    right: 0; /* Aligne à droite */
-    top: 50%; /* Centre verticalement */
-    transform: translateY(-50%); /* Centre parfaitement */
-    cursor: pointer; /* Change le curseur en pointeur pour indiquer que c'est cliquable */
+    display: none;
 }
 
 .menu-toggle .bar {
@@ -504,6 +500,18 @@ form {
     .menu-toggle {
         display: block;
     }
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+
+    /* Afficher le menu de navigation lorsqu'il est actif */
+    .nav-list.active {
+        display: block;
+    }
+}
+
 
     nav ul.nav-list {
         flex-direction: column;
