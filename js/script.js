@@ -75,17 +75,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    $(document).ready(function(){
-        $('.hero-carousel').slick({
-            autoplay: true,
-            autoplaySpeed: 3000,
-            arrows: true,
-            dots: true,
-            fade: false,
-            cssEase: 'linear',
-            slidesToShow: 1,
-            slidesToScroll: 1
-        });
-    });
 });
