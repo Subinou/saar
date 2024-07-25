@@ -58,8 +58,11 @@ header .logo {
 }
 
 .menu-toggle {
-    display: none;
-    cursor: pointer;
+    position: absolute; /* Positionnement absolu par rapport à nav */
+    right: 0; /* Aligne à droite */
+    top: 50%; /* Centre verticalement */
+    transform: translateY(-50%); /* Centre parfaitement */
+    cursor: pointer; /* Change le curseur en pointeur pour indiquer que c'est cliquable */
 }
 
 .menu-toggle .bar {
@@ -69,6 +72,10 @@ header .logo {
     background-color: #fff;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
+}
+
+nav {
+    position: relative; /* Nécessaire pour positionner .menu-toggle par rapport à ce conteneur */
 }
 
 .nav-list {
