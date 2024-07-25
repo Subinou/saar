@@ -2,24 +2,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('mobile-menu');
     const navList = document.getElementById('nav-list');
 
-    menuToggle.addEventListener('click', function () {
-        navList.classList.toggle('active');
-    });
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-
-    if (localStorage.getItem('dark-mode') === 'true') {
-        document.body.classList.add('dark-mode');
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', function () {
+            navList.classList.toggle('active');
+        });
     }
 
-    darkModeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('dark-mode', 'true');
-        } else {
-            localStorage.setItem('dark-mode', 'false');
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+    if (darkModeToggle) {
+        if (localStorage.getItem('dark-mode') === 'true') {
+            document.body.classList.add('dark-mode');
         }
-    });
+
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('dark-mode', 'true');
+            } else {
+                localStorage.setItem('dark-mode', 'false');
+            }
+        });
+    }
 
     const fadeInSections = document.querySelectorAll('.fade-in-section');
     const fadeInLeftSections = document.querySelectorAll('.fade-in-left');
@@ -55,17 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    document.getElementById('contact-form').addEventListener('submit', (event) => {
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
+    const contactForm = document.getElementById('contact-form');
 
-        if (!name || !email || !subject || !message) {
-            event.preventDefault();
-            alert('Tous les champs sont requis.');
-        }
-    });
+    if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !subject || !message) {
+                event.preventDefault();
+                alert('Tous les champs sont requis.');
+            }
+        });
+    }
 
     $(document).ready(function(){
         $('.hero-carousel').slick({
